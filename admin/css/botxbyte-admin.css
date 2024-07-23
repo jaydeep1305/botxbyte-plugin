@@ -1,0 +1,85 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ .bxb-sp-logs-table {
+   width: 95% !important; 
+   border: 1px solid black !important;
+   border-collapse: collapse !important;
+   margin-top: 30px !important;
+ }
+ .bxb-sp-logs-table td, .bxb-sp-logs-table th {
+    border: 1px solid black !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+ }
+
+
+ .bxb-sp-timing-input,
+ .bxb-sp-delay-input,
+ .bxb-sp-articles-range-input {
+    width: 100% !important;
+ }
+
+ .bxb-sp-save-settings-btn {
+    color: white !important;
+    background-color: #2271b1 !important;
+    margin-top: 20px !important;
+ }
+ 
+ .bxb-rp-settings-table {
+   width: 95% !important; 
+   border: 1px solid rgb(133, 129, 129) !important;
+   border-collapse: collapse !important;
+   margin-top: 30px !important;
+}
+.bxb-rp-settings-table td, .bxb-rp-settings-table  th {
+   border: 1px solid black !important;
+   padding-left: 10px !important;
+   padding-right: 10px !important;
+   padding-top: 15px !important;
+   padding-bottom: 15px !important;
+}
+
+.bxb-rp-settings-table-days-th {
+   width: 20% !important;
+}
+
+.bxb-rp-settings-table-articles-th {
+   width: 20% !important;
+}
+
+.bxb-rp-settings-table-delay-th {
+   width: 20% !important;
+}
+
+.bxb-rp-settings-table-timing-th {
+   width: 20% !important;
+}
+
+.bxb-rp-settings-table-change-th {
+   width: 20% !important;
+}
+
+.bxb-rp-change-input,
+.bxb-rp-timing-input,
+.bxb-rp-delay-input,
+.bxb-rp-articles-range-input {
+   width: 100% !important;
+}
+
+.botxbyte-save-webhook-settings-btn,
+.bxb-rp-save-settings-btn {
+   color: white !important;
+   background-color: #2271b1 !important;
+   margin-top: 20px !important;
+}
+
+#bxb-sp-logs-table_wrapper,
+#bxb-rp-logs-table_wrapper {
+   width: 98%;
+   margin-top: 20px;
+}
+

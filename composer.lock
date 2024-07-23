@@ -1,0 +1,83 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "dfc3c0a535b97df12dc62d80bf783765",
+    "packages": [
+        {
+            "name": "dgoring/dom-query",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dgoring/DomQuery.git",
+                "reference": "22958812cf47b98348a0e18b1bfc806cdb5e9bf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dgoring/DomQuery/zipball/22958812cf47b98348a0e18b1bfc806cdb5e9bf0",
+                "reference": "22958812cf47b98348a0e18b1bfc806cdb5e9bf0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-xml": "*",
+                "php": "^7.0.0|^8.0.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12",
+                "phpunit/php-code-coverage": "^5.3|^9.0",
+                "phpunit/phpunit": "^6.5|^9.3.3",
+                "squizlabs/php_codesniffer": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dgoring\\DomQuery\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rct567",
+                    "email": "rct999@gmail.com"
+                },
+                {
+                    "name": "jago86",
+                    "homepage": "https://github.com/jago86"
+                },
+                {
+                    "name": "dgoring",
+                    "homepage": "https://github.com/dgoring"
+                }
+            ],
+            "description": "DomQuery is a PHP library that allows easy 'jQuery like' DOM traversing and manipulation",
+            "keywords": [
+                "css",
+                "dom",
+                "html",
+                "jquery",
+                "selector",
+                "xml"
+            ],
+            "support": {
+                "source": "https://github.com/dgoring/DomQuery/tree/1.0.0"
+            },
+            "time": "2022-11-02T13:28:06+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

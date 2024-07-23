@@ -1,0 +1,6 @@
+/vendor/
+/.idea/
+.vscode/launch.json
+/.project
+/coverage
+.phpunit.result.cache
