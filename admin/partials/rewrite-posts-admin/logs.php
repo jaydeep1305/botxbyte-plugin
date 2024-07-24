@@ -1,7 +1,7 @@
 <div class="mx-left mt-5 ml-5 mb-5">
     <table class="bxb-sp-settings-table w-full border border-slate-100 mt-5 text-sm text-left text-gray-500 rounded-sm">
-        <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+        <thead class="text-xs text-gray-900 uppercase bg-gray-50">
+            <tr class="bg-white border-b hover:bg-gray-50">
                 <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">Record ID</th>
                 <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">Time</th>
                 <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">Post ID</th>
@@ -24,7 +24,7 @@
                     $post_title = get_the_title( $record->post_id );
                     $post_link = get_edit_post_link( $record->post_id );
                     ?>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                        <tr class="bg-white border-b hover:bg-gray-50">
                             <td class="px-6 py-4 border border-slate-200 text-gray-900"> <?php echo $record->id; ?></td>
                             <td class="px-6 py-4 border border-slate-200 text-gray-900"> <?php echo $record->timeofchange; ?></td>
                             <td class="px-6 py-4 border border-slate-200 text-gray-900">

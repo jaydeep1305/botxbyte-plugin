@@ -1,6 +1,6 @@
 <?php if(($page_variable['module'] != 'true') || ($page_variable['module_ai'] != 'true')) :?>
     <div class="max-w-lg mx-left mt-5 ml-5 mb-5">
-        <div class="p-4 mt-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <div class="p-4 mt-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
             <span class="font-medium">Alert ! </span>The module is currently disabled. Please go to the dashboard to enable it.
         </div>
     </div>
@@ -10,14 +10,14 @@
     <?php $flag = true; ?>
     <?php foreach ($errors_html as $error) : ?>
         <?php $flag = false; ?>
-        <div class="p-4 mb-4 w-full text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+        <div class="p-4 mb-4 w-full text-sm text-red-800 rounded-lg bg-red-50" role="alert">
             <span class="font-medium">Alert!</span> <?= $error ?>
         </div>
     <?php endforeach; ?>
     <?php if($flag) : ?>
         <table class="bxb-sp-settings-table w-full border border-slate-100 mt-5 text-sm text-left text-gray-500 rounded-sm">
-            <thead class="text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+            <thead class="text-xs text-gray-900 uppercase bg-gray-50">
+                <tr class="bg-white border-b hover:bg-gray-50">
                     <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">Days</th>
                     <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">No. of Articles</th>
                     <th scope="col" class="bxb-sp-settings-table-days-th px-6 py-3 border border-slate-200">Minimum Delay</th>
@@ -43,7 +43,7 @@
                     $timing_var = 'rp_timing_' . strtolower($day);
                     $change_var = 'rp_change_' . strtolower($day);
                 ?>
-                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <tr class="bg-white border-b hover:bg-gray-50">
                     <td class="px-6 py-4 border border-slate-200 text-gray-900 w-32"><?php echo $full_day_name; ?></td>
                     <td class="px-6 py-4 border border-slate-200 text-gray-900 w-32"><input type="text" placeholder="1-5" class="rp_articles_range_input w-24" id="<?php echo $articles_var; ?>" value="<?php echo $$articles_var; ?>"/></td>
                     
@@ -85,7 +85,7 @@
             </tbody>
         </table>
 
-        <button onclick="rewrite_posts_admin()" class="mt-5 text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex font-semibold ">
+        <button onclick="rewrite_posts_admin()" class="mt-5 text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center flex font-semibold ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" class="w-4 mr-2">
                 <path d="M5 12l5 5l10 -10"></path>
             </svg>

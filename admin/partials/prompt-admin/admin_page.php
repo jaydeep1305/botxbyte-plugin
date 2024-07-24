@@ -20,7 +20,7 @@
             <label for="social_system_prompt" class="block mb-2 text-sm font-medium text-gray-900">System Prompt (Social Media)</label>
             <textarea id="social_system_prompt" name="social_system_prompt" rows="3" cols="40" placeholder="Write a system prompt for social media" class="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-slate-200"><?=$social_system_prompt?></textarea>
         </div>
-        <button onclick="prompt_admin()" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex font-semibold ">
+        <button onclick="prompt_admin()" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-4 py-2 text-center flex font-semibold ">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" class="w-4 mr-2">
                 <path d="M5 12l5 5l10 -10"></path>
             </svg>
