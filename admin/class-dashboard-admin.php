@@ -33,6 +33,7 @@ class Dashboard {
         $ai_configuration_html = "Disconnected";
         $rewrite_posts_html = "Disconnected";
         $social_media_html = "Disconnected";
+        $google_email = "";
         // Sitekit
         if (!class_exists('Google\Site_Kit\Plugin')){
             array_push($errors_html, 'Site Kit by Google is not active.');
@@ -45,6 +46,7 @@ class Dashboard {
                 array_push($errors_html, 'Analytics module is not connected.');
             }else{
                 $analytics_html = "Connected";
+                $google_email = $this->get_googlesitekit_profile();
             }
 
             try {
@@ -62,6 +64,7 @@ class Dashboard {
                     array_push($errors_html, 'Search Console module is not connected.');
                 }else{
                     $search_console_html = "Connected";
+                    $google_email = $this->get_googlesitekit_profile();
                 }
             } catch (\WP_Error $e) {
                 array_push($errors_html, 'Search Console module is not connected.');
@@ -154,6 +157,9 @@ class Dashboard {
         //Social Media
         $social_media_html = (UtilityAdmin::get_option('social_media_html') == 'working') ? 'Connected': 'Disconnected';
 
+        //Inline Related Posts
+        $inline_related_posts_html = 'Connected';
+
         // Status
         $analytics_status = (UtilityAdmin::get_option('analytics_status') == "true")?'checked':'';
         $search_console_status = (UtilityAdmin::get_option('search_console_status') == "true")?'checked':'';
@@ -162,8 +168,8 @@ class Dashboard {
         $ai_configuration_status = (UtilityAdmin::get_option('ai_configuration_status') == "true")?'checked':'';
         $rewrite_posts_status = (UtilityAdmin::get_option('rewrite_posts_status') == "true")?'checked':'';
         $social_media_status = (UtilityAdmin::get_option('social_media_status') == "true")?'checked':'';
-        
-        
+        $inline_related_posts_status = (UtilityAdmin::get_option('inline_related_posts_status') == "true")?'checked':'';
+
         $page_variable = array();
         $page_variable['page_title'] = "Dashboard";
         $page_variable['admin_page_path'] = 'partials/dashboard/admin_page.php';
@@ -197,7 +203,38 @@ class Dashboard {
         if(isset($_POST['social_media_status'])){
             UtilityAdmin::update_option('social_media_status');
         }
+        if(isset($_POST['inline_related_posts_status'])){
+            UtilityAdmin::update_option('inline_related_posts_status');
+        }
 		echo wp_json_encode(array('success'=>'yes'));
 		exit();
+    }
+
+    public function get_googlesitekit_profile(){
+        $google_email = '';
+        $meta_key = 'wp_googlesitekit_profile';
+        global $wpdb;
+        // Query to get all user IDs and meta values for the specified meta_key
+        $results = $wpdb->get_results(
+            $wpdb->prepare(
+                "SELECT user_id, meta_value FROM {$wpdb->usermeta} WHERE meta_key = %s",
+                $meta_key
+            ),
+            ARRAY_A
+        );
+
+        // Check if results are not empty and print the data
+        if (!empty($results)) {
+            foreach ($results as $row) {
+                try{
+                    $google_email = unserialize($row['meta_value'])['email'];
+                }
+                catch(\Exception $ex){
+                    $google_email = '';
+                }
+            }
+        }
+
+        return $google_email;
     }
 }

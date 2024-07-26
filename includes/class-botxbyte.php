@@ -125,6 +125,7 @@ class Botxbyte {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-draft-schedule-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rewrite-posts-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-social-media-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-inline-related-posts-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-botxbyte-admin.php';
 
 		/**

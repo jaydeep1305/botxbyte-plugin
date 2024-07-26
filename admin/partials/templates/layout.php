@@ -78,6 +78,12 @@
                             <p class="text-base md:text-sm font-medium md:font-semibold">Social Media</p>
                         </a>
                     </li>
+                    <li>
+                        <a href="admin.php?page=botxbyte-inline-related-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                            <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/inline-related-posts.svg?v=1'; ?>" alt=""/>
+                            <p class="text-base md:text-sm font-medium md:font-semibold">Inline Related Posts</p>
+                        </a>
+                    </li>
                 </ul>
                 <script>
                     var active_class = "bg-indigo-50 !border-indigo-200 !text-indigo-700 router-link-exact-active";

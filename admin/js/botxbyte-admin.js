@@ -43,6 +43,12 @@
 		});
 
 		jQuery(document).ready(function(){
+			if(jQuery('.bxb-inline-related-posts-input').length > 0){
+				jQuery('.bxb-inline-related-posts-input').select2();
+			}
+		});
+
+		jQuery(document).ready(function(){
 			if(jQuery('.bxb-rp-change-input').length > 0){
 				jQuery('.bxb-rp-change-input').select2();
 			}
@@ -156,6 +162,45 @@ function rewrite_posts_admin(){
 		var value = jQuery(this).val();
 		data[id] = value;
 	});
+
+	jQuery('select').each(function() {
+		var id = jQuery(this).attr('id');
+		var value = jQuery(this).val();
+		data[id] = value;
+	});
+	
+	jQuery.ajax({
+		type: "POST",
+		url: ajaxurl,
+		dataType: "json",
+		data: data,
+		success: function (success) {
+			Swal.fire(
+			  {
+				position: "center",
+				icon: "success",
+				title: "Updated Successfully!",
+				showConfirmButton: true,
+			  }
+			);
+		},
+		error: function () {
+		  Swal.fire(
+			{
+			  position: "center",
+			  icon: "error",
+			  title: "An unexpected error occured!",
+			  showConfirmButton: true,
+			}
+		  );
+		},
+	});
+}
+
+function inline_related_posts_admin(){
+	var data = {
+		action: 'inline_related_posts_admin_save',
+	};
 
 	jQuery('select').each(function() {
 		var id = jQuery(this).attr('id');

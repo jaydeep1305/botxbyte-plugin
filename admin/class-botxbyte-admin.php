@@ -61,7 +61,10 @@ class Botxbyte_Admin {
 
 		add_action( 'wp_ajax_social_media_save_settings', array( new SocialMediaAdmin(), 'save_settings' ) );
 		add_action( 'wp_ajax_nopriv_social_media_save_settings', array( new SocialMediaAdmin(), 'save_settings' ) );
-				
+
+		add_action( 'wp_ajax_inline_related_posts_admin_save', array( new InlineRelatedPostsAdmin(), 'save' ) );
+		add_action( 'wp_ajax_nopriv_inline_related_posts_admin_save', array( new InlineRelatedPostsAdmin(), 'save' ) );
+
 		// Draft to schedule cron
 		add_filter( 'cron_schedules', array( new DraftScheduleAdmin(),'crons_intervals' ) );
 		add_action('sp_schedule_posts_task_hook', array( new DraftScheduleAdmin(),'draft_to_schedule' ) );
@@ -200,6 +203,14 @@ class Botxbyte_Admin {
 			array( new SocialMediaAdmin(), 'logs' )
 		);
 
+		add_submenu_page(
+			null, // Parent slug of the main menu page
+			'Inline Related Posts',
+			'Inline Related Posts',
+			'manage_options',
+			'botxbyte-inline-related-posts',
+			array( new InlineRelatedPostsAdmin(), 'admin_page' )
+		);
 	}
 
 
@@ -220,7 +231,6 @@ class Botxbyte_Admin {
 		?>
 		<div class="wrap">
 			<h1>Botxbyte Settings</h1>
-			
 		</div>
 		<?php
 	}
@@ -246,8 +256,8 @@ class Botxbyte_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		if($hook_suffix == 'admin_page_botxbyte-schedule-posts' || $hook_suffix == 'admin_page_botxbyte-rewrite-posts'){
-			wp_enqueue_style( $this->plugin_name.'selecttwocss', plugin_dir_url( __FILE__ ) . 'css/select2.min.css', array(), $this->version, 'all' );
+		if($hook_suffix == 'admin_page_botxbyte-schedule-posts' || $hook_suffix == 'admin_page_botxbyte-rewrite-posts' || $hook_suffix == 'admin_page_botxbyte-inline-related-posts'){
+			wp_enqueue_style( $this->plugin_name.'selecttwocss', plugin_dir_url( __FILE__ ) . 'css/select2.min.css?v=1', array(), $this->version, 'all' );
 		}
 
 
@@ -280,7 +290,8 @@ class Botxbyte_Admin {
 			$hook_suffix == 'admin_page_botxbyte-ai-config' ||
 			$hook_suffix == 'admin_page_botxbyte-image-converter-settings' ||
 			$hook_suffix == 'admin_page_botxbyte-social-media' ||
-			$hook_suffix == 'toplevel_page_botxbyte-dashboard' 
+			$hook_suffix == 'toplevel_page_botxbyte-dashboard' ||
+			$hook_suffix == 'admin_page_botxbyte-inline-related-posts' 
 		){
 			wp_enqueue_script( $this->plugin_name.'selecttwojs', plugin_dir_url( __FILE__ ) . 'js/select2.min.js', array( 'jquery' ), $this->version, false );
 			wp_enqueue_script( $this->plugin_name.'sweetalertjs', plugin_dir_url( __FILE__ ) . 'js/sweetalert.js', array( 'jquery' ), $this->version, false );

@@ -8,9 +8,11 @@
                 <div class="flex-1">
                     <dt class="text-xl font-extrabold">Google Analytics</dt>
                     <div class="flex items-center">
-                        <dd class="text-gray-500 mr-1"><?=$analytics_html?></dd>
                         <?php if($analytics_html == "Connected") : ?>
+                            <dd class="text-gray-500 mr-1"><?=$google_email?></dd>
                             <svg width="12px" height="12px" stroke="1px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 102.97"><defs><style>.cls-1{fill:#10a64a;}</style></defs><title>small-check-mark</title><path class="cls-1" d="M4.82,69.68c-14.89-16,8-39.87,24.52-24.76,5.83,5.32,12.22,11,18.11,16.27L92.81,5.46c15.79-16.33,40.72,7.65,25.13,24.07l-57,68A17.49,17.49,0,0,1,48.26,103a16.94,16.94,0,0,1-11.58-4.39c-9.74-9.1-21.74-20.32-31.86-28.9Z"/></svg>
+                        <?php else: ?>
+                            <dd class="text-gray-500 mr-1"><?=$analytics_html?></dd>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -26,9 +28,11 @@
                 <div class="flex-1">
                     <dt class="text-xl font-extrabold">Search Console</dt>
                     <div class="flex items-center">
-                        <dd class="text-gray-500 mr-1"><?=$search_console_html?></dd>
                         <?php if($search_console_html == "Connected") : ?>
+                            <dd class="text-gray-500 mr-1"><?=$google_email?></dd>
                             <svg width="12px" height="12px" stroke="1px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 102.97"><defs><style>.cls-1{fill:#10a64a;}</style></defs><title>small-check-mark</title><path class="cls-1" d="M4.82,69.68c-14.89-16,8-39.87,24.52-24.76,5.83,5.32,12.22,11,18.11,16.27L92.81,5.46c15.79-16.33,40.72,7.65,25.13,24.07l-57,68A17.49,17.49,0,0,1,48.26,103a16.94,16.94,0,0,1-11.58-4.39c-9.74-9.1-21.74-20.32-31.86-28.9Z"/></svg>
+                        <?php else: ?>
+                            <dd class="text-gray-500 mr-1"><?=$search_console_html?></dd>
                         <?php endif; ?>
                     </div>
                 </div>
@@ -131,7 +135,26 @@
                     <input type="checkbox" class="sr-only peer bxb-dashboard-switch" name="social_media_status" <?= $social_media_status; ?> />
                     <div class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
                 </label>
-            </div>            
+            </div>
+            
+            <div class="flex p-2 border rounded mr-5">
+                <div class="">
+                    <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/inline-related-posts.svg?v=1'; ?>" class="w-12 mr-5 "/>
+                </div>
+                <div class="flex-1">
+                    <dt class="text-xl font-extrabold">Inline Related Posts</dt>
+                    <div class="flex items-center">
+                        <dd class="text-gray-500 mr-1"><?=$inline_related_posts_html?></dd>
+                        <?php if($inline_related_posts_html == "Connected") : ?>
+                            <svg width="12px" height="12px" stroke="1px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 102.97"><defs><style>.cls-1{fill:#10a64a;}</style></defs><title>small-check-mark</title><path class="cls-1" d="M4.82,69.68c-14.89-16,8-39.87,24.52-24.76,5.83,5.32,12.22,11,18.11,16.27L92.81,5.46c15.79-16.33,40.72,7.65,25.13,24.07l-57,68A17.49,17.49,0,0,1,48.26,103a16.94,16.94,0,0,1-11.58-4.39c-9.74-9.1-21.74-20.32-31.86-28.9Z"/></svg>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <label class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer bxb-dashboard-switch" name="inline_related_posts_status" <?= $inline_related_posts_status; ?> />
+                    <div class="relative w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
 
         </dl>
     </div>

@@ -57,8 +57,8 @@ class Botxbyte_Public {
 		add_action('rest_api_init', array(new \Botxbyte\DynamicArticlePublisherPublic(), 'dynamic_article_publisher_register_custom_route'));
 		add_action('rest_api_init', array(new \Botxbyte\GoogleDataPublic(), 'google_data_register_custom_route'));
 		
-		add_filter( 'determine_current_user', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_handler'), 20);
-		add_filter( 'rest_authentication_errors', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_error' ));
+		// add_filter( 'determine_current_user', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_handler'), 20);
+		// add_filter( 'rest_authentication_errors', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_error' ));
 	}
 
 
