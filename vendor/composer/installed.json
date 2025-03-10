@@ -1,6 +1,60 @@
 {
     "packages": [
         {
+            "name": "davmixcool/php-sentiment-analyzer",
+            "version": "1.2.2",
+            "version_normalized": "1.2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davmixcool/php-sentiment-analyzer.git",
+                "reference": "d7503b68313c62eee3ed0ac9774c0a84d818a405"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davmixcool/php-sentiment-analyzer/zipball/d7503b68313c62eee3ed0ac9774c0a84d818a405",
+                "reference": "d7503b68313c62eee3ed0ac9774c0a84d818a405",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "time": "2020-09-17T13:50:06+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Sentiment\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Oti",
+                    "email": "davmixcool@gmail.com",
+                    "role": "Software Developer"
+                }
+            ],
+            "description": "PHP Sentiment Analyzer is a lexicon and rule-based sentiment analysis tool that is used to understand sentiments in a sentence using VADER (Valence Aware Dictionary and sentiment Reasoner).",
+            "homepage": "https://github.com/davmixcool/php-sentiment-analyzer",
+            "keywords": [
+                "Deep learning",
+                "Sentiment Analyzer",
+                "ai",
+                "machine learning",
+                "nlp",
+                "php",
+                "social"
+            ],
+            "support": {
+                "issues": "https://github.com/davmixcool/php-sentiment-analyzer/issues",
+                "source": "https://github.com/davmixcool/php-sentiment-analyzer/tree/1.2.2"
+            },
+            "install-path": "../davmixcool/php-sentiment-analyzer"
+        },
+        {
             "name": "dgoring/dom-query",
             "version": "1.0.0",
             "version_normalized": "1.0.0.0",
@@ -66,6 +120,58 @@
                 "source": "https://github.com/dgoring/DomQuery/tree/1.0.0"
             },
             "install-path": "../dgoring/dom-query"
+        },
+        {
+            "name": "nlp-tools/nlp-tools",
+            "version": "v0.1.3",
+            "version_normalized": "0.1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/angeloskath/php-nlp-tools.git",
+                "reference": "bbccab0f3ca7277bdf7b292ba67ca644efd0cefe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/angeloskath/php-nlp-tools/zipball/bbccab0f3ca7277bdf7b292ba67ca644efd0cefe",
+                "reference": "bbccab0f3ca7277bdf7b292ba67ca644efd0cefe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "time": "2016-11-03T15:34:42+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "NlpTools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Angelos Katharopoulos",
+                    "email": "angelos@yourse.gr"
+                }
+            ],
+            "description": "NlpTools is a set of php 5.3+ classes for beginner to semi advanced natural language processing work.",
+            "keywords": [
+                "machine learning",
+                "nlp"
+            ],
+            "support": {
+                "issues": "https://github.com/angeloskath/php-nlp-tools/issues",
+                "source": "https://github.com/angeloskath/php-nlp-tools/tree/master"
+            },
+            "install-path": "../nlp-tools/nlp-tools"
         }
     ],
     "dev": true,

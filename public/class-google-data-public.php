@@ -9,14 +9,18 @@ class GoogleDataPublic {
         register_rest_route('botxbyte/v1', '/analytics-data', array(
             'methods' => 'GET',
             'callback' => array(new GoogleDataPublic(), 'get_analytics_data'),
-            'permission_callback' => '__return_true', // This makes the endpoint public
+            'permission_callback' => function () {
+                return current_user_can('manage_options');
+            }, // This makes the endpoint public
         ));
     
         // Endpoint for Search Console data
         register_rest_route('botxbyte/v1', '/search-console-data', array(
             'methods' => 'GET',
             'callback' => array(new GoogleDataPublic(), 'get_search_console_data'),
-            'permission_callback' => '__return_true', // This makes the endpoint public
+            'permission_callback' => function () {
+                return current_user_can('manage_options');
+            },
         ));
     }
 
@@ -26,9 +30,9 @@ class GoogleDataPublic {
             return new \WP_Error('site_kit_not_active', 'Site Kit by Google is not active', array('status' => 400));
         }
     
-        $context = new Google\Site_Kit\Context(ABSPATH);
-        $options = new Google\Site_Kit\Core\Storage\Options($context);
-        $analytics = new Google\Site_Kit\Modules\Analytics_4($context, $options);
+        $context = new \Google\Site_Kit\Context(ABSPATH);
+        $options = new \Google\Site_Kit\Core\Storage\Options($context);
+        $analytics = new \Google\Site_Kit\Modules\Analytics_4($context, $options);
     
         if (!$analytics) {
             return new \WP_Error('analytics_4_not_available', 'Analytics 4 module is not available', array('status' => 400));
@@ -60,9 +64,9 @@ class GoogleDataPublic {
             return new \WP_Error('site_kit_not_active', 'Site Kit by Google is not active', array('status' => 400));
         }
     
-        $context = new Google\Site_Kit\Context(ABSPATH);
-        $options = new Google\Site_Kit\Core\Storage\Options($context);
-        $search_console = new Google\Site_Kit\Modules\Search_Console($context, $options);
+        $context = new \Google\Site_Kit\Context(ABSPATH);
+        $options = new \Google\Site_Kit\Core\Storage\Options($context);
+        $search_console = new \Google\Site_Kit\Modules\Search_Console($context, $options);
     
         if (!$search_console) {
             return new \WP_Error('search_console_not_available', 'Search Console module is not available', array('status' => 400));

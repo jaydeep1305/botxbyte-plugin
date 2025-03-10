@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Sentiment\\' => array($vendorDir . '/davmixcool/php-sentiment-analyzer/src'),
     'Dgoring\\DomQuery\\' => array($vendorDir . '/dgoring/dom-query/src'),
 );

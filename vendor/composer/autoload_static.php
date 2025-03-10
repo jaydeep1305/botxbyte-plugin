@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit38f1c98415e2eabce208a9e64f18f744
 {
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Sentiment\\' => 10,
+        ),
         'D' => 
         array (
             'Dgoring\\DomQuery\\' => 17,
@@ -14,9 +18,23 @@ class ComposerStaticInit38f1c98415e2eabce208a9e64f18f744
     );
 
     public static $prefixDirsPsr4 = array (
+        'Sentiment\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/davmixcool/php-sentiment-analyzer/src',
+        ),
         'Dgoring\\DomQuery\\' => 
         array (
             0 => __DIR__ . '/..' . '/dgoring/dom-query/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'N' => 
+        array (
+            'NlpTools\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/nlp-tools/nlp-tools/src',
+            ),
         ),
     );
 
@@ -29,6 +47,7 @@ class ComposerStaticInit38f1c98415e2eabce208a9e64f18f744
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit38f1c98415e2eabce208a9e64f18f744::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit38f1c98415e2eabce208a9e64f18f744::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit38f1c98415e2eabce208a9e64f18f744::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit38f1c98415e2eabce208a9e64f18f744::$classMap;
 
         }, null, ClassLoader::class);

@@ -1,5 +1,7 @@
 {
     "require": {
-        "dgoring/dom-query": "^1.0"
+        "dgoring/dom-query": "^1.0",
+        "nlp-tools/nlp-tools": "^0.1.3",
+        "davmixcool/php-sentiment-analyzer": "^1.2"
     }
 }
