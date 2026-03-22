@@ -6,8 +6,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  */
 
 /**
@@ -16,12 +16,12 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  * @author     Mutaher <razamutaher@gmail.com>
  */
-namespace Botxbyte;
-class Botxbyte_Deactivator {
+namespace Artinn;
+class Artinn_Deactivator {
 
 	/**
 	 * Short Description. (use period)

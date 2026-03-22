@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte;
+namespace Artinn;
 class AIConfigAdmin {
     /**
      * Namespace for the admin-specific functionality of the image converter plugin.

@@ -27,7 +27,7 @@
     </div>
 <?php else: ?>
     <form action="<?=$form_action?>" class="max-w-sm mx-left mt-5 ml-5 mb-5">
-        <input type="hidden" name="page" value="botxbyte-post-date-change-settings">
+        <input type="hidden" name="page" value="artinn-post-date-change-settings">
         <?php wp_nonce_field('post_date_nonce', 'post_date_nonce_field'); ?>
         <div class="mb-5">
             <label for="urls" class="block mb-2 text-sm font-medium text-gray-900">Urls</label>

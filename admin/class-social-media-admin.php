@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte;
+namespace Artinn;
 class SocialMediaAdmin {
 
     /**
@@ -98,7 +98,7 @@ class SocialMediaAdmin {
         $page_variable['page_title'] = "Social Media";
         $page_variable['form_action'] = '';
         $page_variable['admin_page_path'] = 'partials/social-media-admin/admin_page.php';
-        $page_variable['button'] = 'admin.php?page=botxbyte-social-media-logs';
+        $page_variable['button'] = 'admin.php?page=artinn-social-media-logs';
 		$page_variable['module'] = UtilityAdmin::get_option('social_media_status');
         require_once('partials/templates/layout.php');
     }

@@ -28,7 +28,7 @@
     }
 ?>
 <form action="<?=$form_action?>" method="post" class="max-w-sm mx-left mt-5 ml-5 mb-5">
-    <input type="hidden" name="page" value="botxbyte-replace-string-db-settings">
+    <input type="hidden" name="page" value="artinn-replace-string-db-settings">
     <div class="mb-5">
         <label for="old_string" class="block mb-2 text-sm font-medium text-gray-900">Old String (Internal Links)</label>
         <textarea id="old_string" name="old_string" rows="3" cols="40" placeholder="url1&#10;url2" class="bg-white text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 border border-slate-200"></textarea>

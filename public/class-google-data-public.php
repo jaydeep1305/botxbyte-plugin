@@ -1,19 +1,19 @@
 <?php
 // Add this to your theme's functions.php file or in a custom plugin
-namespace Botxbyte;
+namespace Artinn;
 
 class GoogleDataPublic {
 
     public function google_data_register_custom_route(){
         // Endpoint for Google Analytics 4 data
-        register_rest_route('botxbyte/v1', '/analytics-data', array(
+        register_rest_route('artinn/v1', '/analytics-data', array(
             'methods' => 'GET',
             'callback' => array(new GoogleDataPublic(), 'get_analytics_data'),
             'permission_callback' => '__return_true', // This makes the endpoint public
         ));
     
         // Endpoint for Search Console data
-        register_rest_route('botxbyte/v1', '/search-console-data', array(
+        register_rest_route('artinn/v1', '/search-console-data', array(
             'methods' => 'GET',
             'callback' => array(new GoogleDataPublic(), 'get_search_console_data'),
             'permission_callback' => '__return_true', // This makes the endpoint public

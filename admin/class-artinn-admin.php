@@ -1,9 +1,9 @@
 <?php
 
-namespace Botxbyte;
+namespace Artinn;
 include(plugin_dir_path( __DIR__ ) . '/vendor/autoload.php');
 
-class Botxbyte_Admin {
+class Artinn_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -37,7 +37,7 @@ class Botxbyte_Admin {
 
 		add_action( 'admin_menu', array( $this, 'add_admin_page' ) );
 
-		//botxbyte_save_webhook_settings
+		//artinn_save_webhook_settings
 		add_action( 'wp_ajax_save_status', array( new Dashboard(), 'save_status' ) );
 		add_action( 'wp_ajax_nopriv_save_status', array( new Dashboard(), 'save_status' ) );
 
@@ -88,15 +88,15 @@ class Botxbyte_Admin {
 	}
 	
 
-	// Botxbyte
+	// Artinn
 	public function add_admin_page() {
 		
 		// Create the main menu page
 		add_menu_page(
-			'Botxbyte Settings',
-			'Botxbyte',
+			'Article Innovator Settings',
+			'Article Innovator',
 			'manage_options',
-			'botxbyte-dashboard',
+			'artinn-dashboard',
 			array( new Dashboard(), 'admin_page'),
 			plugin_dir_url( __FILE__ ) . 'assets/custom-icon.svg?version='.$this->version
 		);
@@ -108,7 +108,7 @@ class Botxbyte_Admin {
 			'Image Converter Settings',
 			'Image Converter',
 			'manage_options',
-			'botxbyte-image-converter-settings',
+			'artinn-image-converter-settings',
 			array( new ImageConverterAdmin(), 'admin_page')
 		);
 		// Add the Image Converter as a submenu
@@ -117,7 +117,7 @@ class Botxbyte_Admin {
 			'Post Date Change Settings',
 			'Post Date Change',
 			'manage_options',
-			'botxbyte-post-date-change-settings',
+			'artinn-post-date-change-settings',
 			array( new PostDateChangeAdmin(), 'admin_page')
 		);
 
@@ -127,7 +127,7 @@ class Botxbyte_Admin {
 			'Replace String DB Settings',
 			'Replace String DB',
 			'manage_options',
-			'botxbyte-replace-string-db-settings',
+			'artinn-replace-string-db-settings',
 			array( new ReplaceStringDBAdmin(),'admin_page' )
 		);
 
@@ -136,7 +136,7 @@ class Botxbyte_Admin {
 			'Prompts',
 			'Prompts',
 			'manage_options',
-			'botxbyte-configure-webhook',
+			'artinn-configure-webhook',
 			array( new PromptAdmin(), 'admin_page' )
 		);
 
@@ -145,7 +145,7 @@ class Botxbyte_Admin {
 			'AI Config',
 			'AI Config',
 			'manage_options',
-			'botxbyte-ai-config',
+			'artinn-ai-config',
 			array( new AIConfigAdmin(), 'admin_page' )
 		);
 
@@ -154,7 +154,7 @@ class Botxbyte_Admin {
 			'Draft to Schedule',
 			'Draft to Schedule',
 			'manage_options',
-			'botxbyte-schedule-posts',
+			'artinn-schedule-posts',
 			array( new DraftScheduleAdmin(), 'admin_page' )
 		);
 
@@ -163,7 +163,7 @@ class Botxbyte_Admin {
 			'Draft to Schedule Logs',
 			'Draft to Schedule Logs',
 			'manage_options',
-			'botxbyte-schedule-posts-logs',
+			'artinn-schedule-posts-logs',
 			array( new DraftScheduleAdmin(), 'logs' )
 		);
 
@@ -172,7 +172,7 @@ class Botxbyte_Admin {
 			'Rewrite Posts',
 			'Rewrite Posts',
 			'manage_options',
-			'botxbyte-rewrite-posts',
+			'artinn-rewrite-posts',
 			array( new RewritePostsAdmin(), 'admin_page' )
 		);
 
@@ -181,7 +181,7 @@ class Botxbyte_Admin {
 			'Rewrite Logs',
 			'Rewrite Logs',
 			'manage_options',
-			'botxbyte-rewrite-posts-logs',
+			'artinn-rewrite-posts-logs',
 			array( new RewritePostsAdmin(), 'logs' )
 		);
 
@@ -190,7 +190,7 @@ class Botxbyte_Admin {
 			'Social Media',
 			'Social Media',
 			'manage_options',
-			'botxbyte-social-media',
+			'artinn-social-media',
 			array( new SocialMediaAdmin(), 'admin_page' )
 		);
 
@@ -199,7 +199,7 @@ class Botxbyte_Admin {
 			'Social Media Logs',
 			'Social Media Logs',
 			'manage_options',
-			'botxbyte-social-media-logs',
+			'artinn-social-media-logs',
 			array( new SocialMediaAdmin(), 'logs' )
 		);
 
@@ -208,7 +208,7 @@ class Botxbyte_Admin {
 			'Inline Related Posts',
 			'Inline Related Posts',
 			'manage_options',
-			'botxbyte-inline-related-posts',
+			'artinn-inline-related-posts',
 			array( new InlineRelatedPostsAdmin(), 'admin_page' )
 		);
 	}
@@ -226,18 +226,18 @@ class Botxbyte_Admin {
 	}
 
 
-	// Botxbyte
-	public function botxbyte_settings_page() {
+	// Artinn
+	public function artinn_settings_page() {
 		?>
 		<div class="wrap">
-			<h1>Botxbyte Settings</h1>
+			<h1>Article Innovator Settings</h1>
 		</div>
 		<?php
 	}
 
 
 
-	// Botxbyte
+	// Artinn
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
@@ -249,23 +249,23 @@ class Botxbyte_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Botxbyte_Loader as all of the hooks are defined
+		 * defined in Artinn_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Botxbyte_Loader will then create the relationship
+		 * The Artinn_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-		if($hook_suffix == 'admin_page_botxbyte-schedule-posts' || $hook_suffix == 'admin_page_botxbyte-rewrite-posts' || $hook_suffix == 'admin_page_botxbyte-inline-related-posts'){
+		if($hook_suffix == 'admin_page_artinn-schedule-posts' || $hook_suffix == 'admin_page_artinn-rewrite-posts' || $hook_suffix == 'admin_page_artinn-inline-related-posts'){
 			wp_enqueue_style( $this->plugin_name.'selecttwocss', plugin_dir_url( __FILE__ ) . 'css/select2.min.css?v=1', array(), $this->version, 'all' );
 		}
 
 
-		// wp_enqueue_style( $this->plugin_name.'-admin', plugin_dir_url( __FILE__ ) . 'css/botxbyte-admin.css', array(), $this->version, 'all' );
+		// wp_enqueue_style( $this->plugin_name.'-admin', plugin_dir_url( __FILE__ ) . 'css/artinn-admin.css', array(), $this->version, 'all' );
 
 	}
 
-	// Botxbyte
+	// Artinn
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
@@ -276,28 +276,28 @@ class Botxbyte_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Botxbyte_Loader as all of the hooks are defined
+		 * defined in Artinn_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Botxbyte_Loader will then create the relationship
+		 * The Artinn_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 		if(	
-			$hook_suffix == 'admin_page_botxbyte-schedule-posts' || 
-			$hook_suffix == 'admin_page_botxbyte-rewrite-posts' || 
-			$hook_suffix == 'admin_page_botxbyte-configure-webhook' ||
-			$hook_suffix == 'admin_page_botxbyte-ai-config' ||
-			$hook_suffix == 'admin_page_botxbyte-image-converter-settings' ||
-			$hook_suffix == 'admin_page_botxbyte-social-media' ||
-			$hook_suffix == 'toplevel_page_botxbyte-dashboard' ||
-			$hook_suffix == 'admin_page_botxbyte-inline-related-posts' 
+			$hook_suffix == 'admin_page_artinn-schedule-posts' || 
+			$hook_suffix == 'admin_page_artinn-rewrite-posts' || 
+			$hook_suffix == 'admin_page_artinn-configure-webhook' ||
+			$hook_suffix == 'admin_page_artinn-ai-config' ||
+			$hook_suffix == 'admin_page_artinn-image-converter-settings' ||
+			$hook_suffix == 'admin_page_artinn-social-media' ||
+			$hook_suffix == 'toplevel_page_artinn-dashboard' ||
+			$hook_suffix == 'admin_page_artinn-inline-related-posts' 
 		){
 			wp_enqueue_script( $this->plugin_name.'selecttwojs', plugin_dir_url( __FILE__ ) . 'js/select2.min.js', array( 'jquery' ), $this->version, false );
 			wp_enqueue_script( $this->plugin_name.'sweetalertjs', plugin_dir_url( __FILE__ ) . 'js/sweetalert.js', array( 'jquery' ), $this->version, false );
 		}
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/botxbyte-admin.js', array( 'jquery' ), $this->version, true );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/artinn-admin.js', array( 'jquery' ), $this->version, true );
 
 	}
 

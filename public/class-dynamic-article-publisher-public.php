@@ -5,19 +5,19 @@
  * Version: 1.0
  * Author: Your Name
  */
-namespace Botxbyte;
+namespace Artinn;
 
 class DynamicArticlePublisherPublic {
 
     public function dynamic_article_publisher_register_custom_route() {
-        register_rest_route('botxbyte/v1', '/dynamic-article-publish/', array(
+        register_rest_route('artinn/v1', '/dynamic-article-publish/', array(
             'methods' => 'POST',
             'callback' => array(new DynamicArticlePublisherPublic(), 'publish_article'),
             'permission_callback' => function () {
                 return current_user_can('publish_posts');
             }
         ));
-        register_rest_route('botxbyte/v1', '/article-info/', array(
+        register_rest_route('artinn/v1', '/article-info/', array(
             'methods' => 'POST',
             'callback' => array(new DynamicArticlePublisherPublic(), 'article_info'),
             'permission_callback' => function () {

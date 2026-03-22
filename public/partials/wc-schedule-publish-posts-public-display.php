@@ -8,8 +8,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/public/partials
+ * @package    Artinn
+ * @subpackage Artinn/public/partials
  */
 ?>
 

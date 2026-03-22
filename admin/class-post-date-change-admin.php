@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte; 
+namespace Artinn; 
 class PostDateChangeAdmin {
 
     /**
@@ -95,7 +95,7 @@ class PostDateChangeAdmin {
             
         } 
 
-		$form_action = 'admin.php?page=botxbyte-post-date-change-settings';
+		$form_action = 'admin.php?page=artinn-post-date-change-settings';
 		// current timestamp
 		$current_timestamp = time();
 		// 2 day before timestamp

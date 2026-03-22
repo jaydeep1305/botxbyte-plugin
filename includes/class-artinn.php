@@ -9,8 +9,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  */
 
 /**
@@ -23,12 +23,12 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  * @author     Mutaher <razamutaher@gmail.com>
  */
-namespace Botxbyte;
-class Botxbyte {
+namespace Artinn;
+class Artinn {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -36,7 +36,7 @@ class Botxbyte {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Botxbyte_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Artinn_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -68,12 +68,12 @@ class Botxbyte {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'BOTXBYTE__VERSION' ) ) {
-			$this->version = BOTXBYTE__VERSION;
+		if ( defined( 'ARTINN__VERSION' ) ) {
+			$this->version = ARTINN__VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'botxbyte';
+		$this->plugin_name = 'artinn';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -87,10 +87,10 @@ class Botxbyte {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Botxbyte_Loader. Orchestrates the hooks of the plugin.
-	 * - Botxbyte_i18n. Defines internationalization functionality.
-	 * - Botxbyte_Admin. Defines all hooks for the admin area.
-	 * - Botxbyte_Public. Defines all hooks for the public side of the site.
+	 * - Artinn_Loader. Orchestrates the hooks of the plugin.
+	 * - Artinn_i18n. Defines internationalization functionality.
+	 * - Artinn_Admin. Defines all hooks for the admin area.
+	 * - Artinn_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -104,13 +104,13 @@ class Botxbyte {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-botxbyte-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-artinn-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-botxbyte-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-artinn-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -126,7 +126,7 @@ class Botxbyte {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rewrite-posts-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-social-media-admin.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-inline-related-posts-admin.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-botxbyte-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-artinn-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -134,16 +134,16 @@ class Botxbyte {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-basic-auth-public.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-dynamic-article-publisher-public.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-botxbyte-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-artinn-public.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-google-data-public.php';
-		$this->loader = new Botxbyte_Loader();
+		$this->loader = new Artinn_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Botxbyte_i18n class in order to set the domain and to register the hook
+	 * Uses the Artinn_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -151,7 +151,7 @@ class Botxbyte {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Botxbyte_i18n();
+		$plugin_i18n = new Artinn_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -166,7 +166,7 @@ class Botxbyte {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Botxbyte_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Artinn_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -182,7 +182,7 @@ class Botxbyte {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Botxbyte_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Artinn_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -213,7 +213,7 @@ class Botxbyte {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Botxbyte_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Artinn_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

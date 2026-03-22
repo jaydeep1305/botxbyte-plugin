@@ -6,8 +6,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/public
+ * @package    Artinn
+ * @subpackage Artinn/public
  */
 
 /**
@@ -16,12 +16,12 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/public
+ * @package    Artinn
+ * @subpackage Artinn/public
  * @author     Mutaher <razamutaher@gmail.com>
  */
-namespace Botxbyte;
-class Botxbyte_Public {
+namespace Artinn;
+class Artinn_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -54,11 +54,11 @@ class Botxbyte_Public {
 		$this->version = $version;
 
 
-		add_action('rest_api_init', array(new \Botxbyte\DynamicArticlePublisherPublic(), 'dynamic_article_publisher_register_custom_route'));
-		add_action('rest_api_init', array(new \Botxbyte\GoogleDataPublic(), 'google_data_register_custom_route'));
+		add_action('rest_api_init', array(new \Artinn\DynamicArticlePublisherPublic(), 'dynamic_article_publisher_register_custom_route'));
+		add_action('rest_api_init', array(new \Artinn\GoogleDataPublic(), 'google_data_register_custom_route'));
 		
-		// add_filter( 'determine_current_user', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_handler'), 20);
-		// add_filter( 'rest_authentication_errors', array(new \Botxbyte\BasicAuthPublic(), 'json_basic_auth_error' ));
+		// add_filter( 'determine_current_user', array(new \Artinn\BasicAuthPublic(), 'json_basic_auth_handler'), 20);
+		// add_filter( 'rest_authentication_errors', array(new \Artinn\BasicAuthPublic(), 'json_basic_auth_error' ));
 	}
 
 
@@ -81,15 +81,15 @@ class Botxbyte_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Botxbyte_Loader as all of the hooks are defined
+		 * defined in Artinn_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Botxbyte_Loader will then create the relationship
+		 * The Artinn_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/botxbyte-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/artinn-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -104,15 +104,15 @@ class Botxbyte_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Botxbyte_Loader as all of the hooks are defined
+		 * defined in Artinn_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Botxbyte_Loader will then create the relationship
+		 * The Artinn_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/botxbyte-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/artinn-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

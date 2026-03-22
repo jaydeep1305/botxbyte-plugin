@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte;
+namespace Artinn;
 class ImageConverterAdmin {
 
 	/**

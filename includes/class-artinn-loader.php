@@ -6,8 +6,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  */
 
 /**
@@ -17,12 +17,12 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  * @author     Mutaher <razamutaher@gmail.com>
  */
-namespace Botxbyte;
-class Botxbyte_Loader {
+namespace Artinn;
+class Artinn_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

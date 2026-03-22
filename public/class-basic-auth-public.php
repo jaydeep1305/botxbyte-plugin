@@ -7,7 +7,7 @@
  * Version: 0.1
  * Plugin URI: https://github.com/WP-API/Basic-Auth
  */
-namespace Botxbyte;
+namespace Artinn;
 class BasicAuthPublic {
     public function json_basic_auth_handler( $user ) {
         global $wp_json_basic_auth_error;

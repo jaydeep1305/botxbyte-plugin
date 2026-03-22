@@ -1,5 +1,5 @@
 <?php
-namespace Botxbyte;
+namespace Artinn;
 class DraftScheduleAdmin {
 
     /**
@@ -93,7 +93,7 @@ class DraftScheduleAdmin {
         $page_variable['page_title'] = "Draft to Schedule";
         $page_variable['form_action'] = "";
         $page_variable['admin_page_path'] = 'partials/draft-schedule-admin/admin_page.php';
-        $page_variable['button'] = 'admin.php?page=botxbyte-schedule-posts-logs';
+        $page_variable['button'] = 'admin.php?page=artinn-schedule-posts-logs';
 		$page_variable['module'] = UtilityAdmin::get_option('draft_to_schedule_status');
         require_once('partials/templates/layout.php');
     }

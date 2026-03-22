@@ -24,62 +24,62 @@
                 </div>
                 <ul class="grid gap-y-0.5 mb-4 mt-10 gj-nav-menu">
                     <li>
-                        <a href="admin.php?page=botxbyte-dashboard" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition" aria-current="page">
+                        <a href="admin.php?page=artinn-dashboard" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition" aria-current="page">
                         <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/dashboard.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Dashboard</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-image-converter-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-image-converter-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/image-converter.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Image Converter</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-post-date-change-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-post-date-change-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/post-date-change.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Post Date Change</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-replace-string-db-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-replace-string-db-settings" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/replace-string-in-database.svg'; ?>" alt=""/>                        
                             <p class="text-base md:text-sm font-medium md:font-semibold">Replace String</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-configure-webhook" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-configure-webhook" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/prompts.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Prompts</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-ai-config" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-ai-config" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/ai-configuration.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">AI Configuration</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-schedule-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-schedule-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/draft-to-schedule.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Draft to Schedule</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-rewrite-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-rewrite-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/rewrite-posts.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Rewrite Posts</p>
                         </a>
                     </li>
 
                     <li>
-                        <a href="admin.php?page=botxbyte-social-media" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-social-media" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/social-media.svg'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Social Media</p>
                         </a>
                     </li>
                     <li>
-                        <a href="admin.php?page=botxbyte-inline-related-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
+                        <a href="admin.php?page=artinn-inline-related-posts" class="flex text-left border border-transparent items-center gap-3 px-3 py-2 text-slate-700 hover:text-indigo-800 w-full rounded transition">
                             <img src="<?php echo plugin_dir_url( dirname(dirname( __FILE__ )) ) . 'assets/icons/inline-related-posts.svg?v=1'; ?>" alt=""/>
                             <p class="text-base md:text-sm font-medium md:font-semibold">Inline Related Posts</p>
                         </a>
@@ -96,7 +96,7 @@
                     });
                 </script>
             </nav>
-            <div class="absolute bottom-10 left-4 h-12">v<?= BOTXBYTE__VERSION ?></div>
+            <div class="absolute bottom-10 left-4 h-12">v<?= ARTINN__VERSION ?></div>
         </div>
         <!-- Sidebar -->
         <div class="col-span-3 bg-white rounded-lg p-2 mt-4 min-h-screen">
@@ -112,7 +112,7 @@
                         <a class="mt-3 mr-3 px-3 py-2 text-xs font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 h-8" href="<?=$page_variable['button']?>">Logs</a>
                     <?php endif ?>
                 </div>
-                <?php require_once( WP_PLUGIN_DIR . '/botxbyte/admin/' . $page_variable['admin_page_path'] ); ?>
+                <?php require_once( WP_PLUGIN_DIR . '/article-innovator-wp-plugin/admin/' . $page_variable['admin_page_path'] ); ?>
             </div>
         </div>
     </div>

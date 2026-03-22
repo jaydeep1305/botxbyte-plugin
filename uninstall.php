@@ -22,7 +22,7 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
+ * @package    Artinn
  */
 
 // If uninstall not called from WordPress, then exit.

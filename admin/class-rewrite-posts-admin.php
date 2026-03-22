@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte;
+namespace Artinn;
 class RewritePostsAdmin {
 
     /**
@@ -142,7 +142,7 @@ class RewritePostsAdmin {
         $page_variable['page_title'] = "Rewrite Posts";
         $page_variable['form_action'] = '';
         $page_variable['admin_page_path'] = 'partials/rewrite-posts-admin/admin_page.php';
-        $page_variable['button'] = 'admin.php?page=botxbyte-rewrite-posts-logs';
+        $page_variable['button'] = 'admin.php?page=artinn-rewrite-posts-logs';
 		$page_variable['module'] = UtilityAdmin::get_option('rewrite_posts_status');
 		$page_variable['module_ai'] = UtilityAdmin::get_option('ai_configuration_status');
         require_once('partials/templates/layout.php');

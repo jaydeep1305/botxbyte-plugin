@@ -29,7 +29,7 @@
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                     </svg>
-                    <span>Create New Applet : <a href="https://ifttt.com/p/ifttt_botxbyte_com/applets/new?from_applet=t7yDjRZd" target="_blank" class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Click Here</a></span>
+                    <span>Create New Applet : <a href="https://ifttt.com/p/ifttt_artinn/applets/new?from_applet=t7yDjRZd" target="_blank" class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded">Click Here</a></span>
                 </li>
                 <li class="flex items-center space-x-3 rtl:space-x-reverse">
                     <svg class="flex-shrink-0 w-3.5 h-3.5 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">

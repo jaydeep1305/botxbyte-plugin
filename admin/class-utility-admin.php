@@ -1,5 +1,5 @@
 <?php
-namespace Botxbyte;
+namespace Artinn;
 class UtilityAdmin {
     
     public static function update_option($key, $value=''){

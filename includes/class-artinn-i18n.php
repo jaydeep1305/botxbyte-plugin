@@ -9,8 +9,8 @@
  * @link       https://www.fiverr.com/razamutaher
  * @since      1.0.0
  *
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  */
 
 /**
@@ -20,12 +20,12 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Botxbyte
- * @subpackage Botxbyte/includes
+ * @package    Artinn
+ * @subpackage Artinn/includes
  * @author     Mutaher <razamutaher@gmail.com>
  */
-namespace Botxbyte;
-class Botxbyte_i18n {
+namespace Artinn;
+class Artinn_i18n {
 
 
 	/**
@@ -36,7 +36,7 @@ class Botxbyte_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'botxbyte',
+			'artinn',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

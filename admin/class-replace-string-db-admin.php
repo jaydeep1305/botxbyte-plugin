@@ -9,7 +9,7 @@
  * @package    _Image_Converter
  * @subpackage _Image_Converter/admin
  */
-namespace Botxbyte;
+namespace Artinn;
 class ReplaceStringDBAdmin {
 
     /**
@@ -26,7 +26,7 @@ class ReplaceStringDBAdmin {
 			wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 		}
         $page_title = "Replace String in Database";
-        $form_action = "admin.php?page=botxbyte-replace-string-db-settings";
+        $form_action = "admin.php?page=artinn-replace-string-db-settings";
 
         $page_variable = array();
         $page_variable['page_title'] = "Replace String in Database";
